@@ -5,20 +5,11 @@ function App() {
   const [task, setTask] = useState("");
   const [taskList, setTaskList] = useState([]);
 
-  const filterList = (list) => {
-    return list.map((item) => {
-      item.complete = item.complete === false ? "Need to do" : "Done";
-      item.toggleText = item.toggleText === true ? "Complete" : "Uncomplete";
-      return item;
-    });
-  };
-
-  const loadTasks = () => {
+   const loadTasks = () => {
     axios
       .get("/api/todo")
       .then((response) => {
-        let filteredList = filterList(response.data);
-        setTaskList(filteredList);
+        setTaskList(response.data);
       })
       .catch((error) => {
         console.error("ERROR in GET", error);
@@ -89,11 +80,12 @@ function App() {
           {taskList.map((task) => (
             <div key={task.id}>
               <li className={task.complete}> {task.todo} </li>
-              <p> {task.complete} </p>
+                <input 
+                type="checkbox"
+                checked={task.complete}
+                onChange={() => toggleComplete(task.id)} />
+              
               <button onClick={() => deleteTask(task.id)}>Remove</button>
-              <button onClick={() => toggleComplete(task.id)}>
-                {task.toggleText}
-              </button>
             </div>
           ))}
         </ul>
