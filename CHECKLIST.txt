@@ -19,14 +19,14 @@ FRONT END
 []  have items displayed with delete button
 []
 SERVER
-[]  verify server code
-[]  create link to router
+[x]  verify server code
+[x]  create link to router
 POOL
 []  create a pool
 ROUTER
 []  create GET route
-[]  create POST
-[]  create DELETE
+[]  create POST route
+[]  create DELETE route
 []
 []
 []

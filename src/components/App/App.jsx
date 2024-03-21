@@ -7,8 +7,8 @@ function App() {
 
   const filterList = (list) => {
     return list.map((item) => {
-      item.toggleText = item.toggleText === true ? "Complete" : "Uncomplete";
       item.complete = item.complete === false ? "Need to do" : "Done";
+      item.toggleText = item.toggleText === true ? "Complete" : "Uncomplete";
       return item;
     });
   };
@@ -88,10 +88,8 @@ function App() {
         <ul>
           {taskList.map((task) => (
             <div key={task.id}>
-              <li className={task.complete}>
-                {" "}
-                {task.todo} {task.complete}{" "}
-              </li>
+              <li className={task.complete}> {task.todo} </li>
+              <p> {task.complete} </p>
               <button onClick={() => deleteTask(task.id)}>Remove</button>
               <button onClick={() => toggleComplete(task.id)}>
                 {task.toggleText}
