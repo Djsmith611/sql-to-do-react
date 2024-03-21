@@ -1,0 +1,31 @@
+[x] create a checklist file
+[x] run npm install
+[x] npm run server
+[x] npm run client
+FRONT END
+[]  create a form
+[]  create an input field
+[]  create a display field
+[]  attach input field to a variable
+[]  display variable in display field
+[]  create GET route
+[]  create POST route
+[]  create DELETE route
+[]  have items displayed with delete button
+[]
+SERVER
+[]  verify server code
+[]  create link to router
+POOL
+[]  create a pool
+ROUTER
+[]  create GET route
+[]  create POST
+[]  create DELETE
+[]
+[]
+[]
+DATABASE
+[]  create database.sql file
+[]  create database
+[]  link database to pool
