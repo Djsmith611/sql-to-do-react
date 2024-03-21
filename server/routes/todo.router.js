@@ -22,11 +22,11 @@ todoRouter.get("/", (req, res) => {
 todoRouter.post("/", (req, res) => {
   const task = req.body;
   const sqlText = `
-  INSERT INTO tasks (todo, complete, toggleText) 
-  VALUES ($1, $2, $3);
+  INSERT INTO tasks (todo, complete) 
+  VALUES ($1, $2);
   `;
   pool
-    .query(sqlText, [task.todo, task.complete, task.toggleText])
+    .query(sqlText, [task.todo, task.complete])
     .then((result) => {
       res.sendStatus(201);
     })
@@ -41,7 +41,7 @@ todoRouter.put("/:id", (req, res) => {
   const taskId = req.params.id;
   const sqlText = `
     UPDATE tasks
-    SET complete = NOT complete, toggleText = NOT toggleText
+    SET complete = NOT complete
     WHERE id = $1;
     `;
   pool

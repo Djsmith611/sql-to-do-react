@@ -29,6 +29,6 @@ ROUTER
 [x]  create PUT route
 [x]  create DELETE route
 DATABASE
-[]  create database.sql file
-[]  create database
-[]  link database to pool
+[x]  create database.sql file
+[x]  create database
+[x]  link database to pool

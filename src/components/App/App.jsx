@@ -19,7 +19,7 @@ function App() {
 
   const sendToServer = (e) => {
     e.preventDefault();
-    const data = { todo: task, complete: false, toggleText: true };
+    const data = { todo: task, complete: false};
     axios
       .post("/api/todo", data)
       .then((response) => {
