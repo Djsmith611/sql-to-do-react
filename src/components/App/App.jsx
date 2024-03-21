@@ -31,6 +31,18 @@ function App() {
       });
   };
 
+  const deleteTask = (id) => {
+    axios
+      .delete(`/api/todo/{id}`)
+      .then((response) => {
+        loadTasks();
+      })
+      .catch((error) => {
+        console.error("ERROR in DELETE", error);
+        alert("Something went wrong.");
+      });
+  };
+
   useEffect(() => {
     loadTasks();
   }, []);
