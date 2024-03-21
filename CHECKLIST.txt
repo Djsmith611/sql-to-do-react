@@ -22,15 +22,12 @@ SERVER
 [x]  verify server code
 [x]  create link to router
 POOL
-[]  create a pool
+[x]  create a pool
 ROUTER
 [x]  create GET route
 [x]  create POST route
 [x]  create PUT route
-[]  create DELETE route
-[]
-[]
-[]
+[x]  create DELETE route
 DATABASE
 []  create database.sql file
 []  create database

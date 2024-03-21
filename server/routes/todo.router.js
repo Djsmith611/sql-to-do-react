@@ -13,7 +13,7 @@ todoRouter.get("/", (req, res) => {
       res.status(200).send(result.rows);
     })
     .catch((error) => {
-      console.log(`ERROR in ROUTER GET ${sqlText}`, error);
+      console.log(`ERROR in ROUTER GET ${sqlText}:`, error);
       res.sendStatus(500);
     });
 });
@@ -56,5 +56,21 @@ todoRouter.put("/:id", (req, res) => {
 });
 
 // DELETE
+todoRouter.delete('/:id', (req, res) => {
+    const taskId = req.params.id;
+    const sqlText = `
+    DELETE FROM tasks 
+    WHERE id = $1;
+    `;
+
+    pool.query(sqlText, [taskId])
+        .then((result) => {
+            res.sendStatus(200);
+        })
+        .catch((error) => {
+            console.error(`ERROR in ROUTER DELETE${sqlText}:`, error);
+            res.sendStatus(500);
+        });
+})
 
 module.exports = todoRouter;
