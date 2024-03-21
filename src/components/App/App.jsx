@@ -5,11 +5,20 @@ function App() {
   const [task, setTask] = useState("");
   const [taskList, setTaskList] = useState([]);
 
+  const filterList = (list) => {
+    return list.map((item) => {
+      item.toggleText = item.toggleText === true ? "Complete" : "Uncomplete";
+      item.complete = item.complete === false ? "Need to do" : "Done";
+      return item;
+    });
+  };
+
   const loadTasks = () => {
     axios
       .get("/api/todo")
       .then((response) => {
-        setTaskList(response.data);
+        let filteredList = filterList(response.data);
+        setTaskList(filteredList);
       })
       .catch((error) => {
         console.error("ERROR in GET", error);
@@ -19,7 +28,7 @@ function App() {
 
   const sendToServer = (e) => {
     e.preventDefault();
-    const data = { todo: task };
+    const data = { todo: task, complete: false, toggleText: true };
     axios
       .post("/api/todo", data)
       .then((response) => {
@@ -79,9 +88,14 @@ function App() {
         <ul>
           {taskList.map((task) => (
             <div key={task.id}>
-              <li> {task.todo} {task.complete} </li>
+              <li className={task.complete}>
+                {" "}
+                {task.todo} {task.complete}{" "}
+              </li>
               <button onClick={() => deleteTask(task.id)}>Remove</button>
-              <button onClick={() => toggleComplete(task.id)}>{task.toggleText}</button>
+              <button onClick={() => toggleComplete(task.id)}>
+                {task.toggleText}
+              </button>
             </div>
           ))}
         </ul>
