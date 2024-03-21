@@ -11,7 +11,7 @@ FRONT END
 [x] source axios
 [x] create POST route
 [x] add button for submit function
-[]  create GET route
+[x]  create GET route
 []  create DELETE route
 []  display variable in display field
 []  have items displayed with delete button

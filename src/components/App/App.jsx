@@ -5,16 +5,31 @@ function App() {
   const [task, setTask] = useState("");
   const [taskList, setTaskList] = useState([]);
 
+  const loadTasks = () => {
+    axios
+      .get("/api/todo")
+      .then((response) => {
+        setTaskList(response.data);
+      })
+      .catch((error) => {
+        console.error("ERROR in GET", error);
+        alert("Something went wrong.");
+      });
+  };
+
   const sendToServer = (e) => {
     e.preventDefault();
-    const data ={task:task};
-    axios.post('/api/todo', data).then((response) => {
-      // todo GET
-    }).catch((error) => {
-      console.error('ERROR in POST',error);
-      alert('Something went wrong.');
-    });
-  }
+    const data = { task: task };
+    axios
+      .post("/api/todo", data)
+      .then((response) => {
+        loadTasks();
+      })
+      .catch((error) => {
+        console.error("ERROR in POST", error);
+        alert("Something went wrong.");
+      });
+  };
 
   return (
     <div className="app">
@@ -22,7 +37,7 @@ function App() {
         <h1>TO DO</h1>
       </header>
       <main>
-        <form onSubmit={sendToServer} >
+        <form onSubmit={sendToServer}>
           <h3>Add an item</h3>
           <input
             type="text"
