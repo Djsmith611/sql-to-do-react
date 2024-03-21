@@ -1,8 +1,20 @@
 import { useState } from "react";
+import axios from "axios";
 
 function App() {
   const [task, setTask] = useState("");
   const [taskList, setTaskList] = useState([]);
+
+  const sendToServer = (e) => {
+    e.preventDefault();
+    const data ={task:task};
+    axios.post('/api/todo', data).then((response) => {
+      // todo GET
+    }).catch((error) => {
+      console.error('ERROR in POST',error);
+      alert('Something went wrong.');
+    });
+  }
 
   return (
     <div className="app">

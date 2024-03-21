@@ -8,10 +8,11 @@ FRONT END
 [x] create a display field
 [x] attach input field to a variable
 [x] create list variable to be displayed
-[]  display variable in display field
+[x] source axios
+[x] create POST route
 []  create GET route
-[]  create POST route
 []  create DELETE route
+[]  display variable in display field
 []  have items displayed with delete button
 []
 SERVER
