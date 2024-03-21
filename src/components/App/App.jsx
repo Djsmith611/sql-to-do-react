@@ -1,28 +1,29 @@
-import {useState} from 'react';
+import { useState } from "react";
 
-function App () {
-  
+function App() {
+  const [task, setTask] = useState("");
+
   return (
-    <div className='app'>
+    <div className="app">
       <header>
         <h1>TO DO APP</h1>
       </header>
       <main>
         <form>
           <h3>Add a task</h3>
-          <input type="text" placeholder='Task' />
+          <input
+            type="text"
+            value={task}
+            placeholder="Task"
+            onChange={(e) => setTask(e.target.value)}
+          />
         </form>
         <h2>Tasks</h2>
-        <ul>
-
-        </ul>
+        <ul></ul>
       </main>
-      <footer>
-
-      </footer>
+      <footer></footer>
     </div>
   );
-
 }
 
-export default App
+export default App;
