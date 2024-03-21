@@ -3,8 +3,8 @@
 [x] npm run server
 [x] npm run client
 FRONT END
-[]  create a form
-[]  create an input field
+[x]  create a form
+[x]  create an input field
 []  create a display field
 []  attach input field to a variable
 []  display variable in display field

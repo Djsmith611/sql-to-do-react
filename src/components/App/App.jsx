@@ -8,7 +8,9 @@ function App () {
         <h1>TO DO APP</h1>
       </header>
       <main>
-
+        <form>
+          <input type="text" />
+        </form>
       </main>
       <footer>
 
