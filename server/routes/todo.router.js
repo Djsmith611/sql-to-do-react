@@ -3,6 +3,20 @@ const todoRouter = express.Router();
 const pool = require("../modules/pool.js");
 
 // GET
+todoRouter.get("/", (req, res) => {
+  const sqlText = `
+    SELECT * FROM tasks;
+    `;
+  pool
+    .query(sqlText)
+    .then((result) => {
+      res.status(200).send(result.rows);
+    })
+    .catch((error) => {
+      console.log(`ERROR in ROUTER GET ${sqlText}`, error);
+      res.sendStatus(500);
+    });
+});
 
 // POST
 todoRouter.post("/", (req, res) => {
