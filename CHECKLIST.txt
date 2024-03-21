@@ -24,8 +24,9 @@ SERVER
 POOL
 []  create a pool
 ROUTER
-[]  create GET route
+[x]  create GET route
 [x]  create POST route
+[x]  create PUT route
 []  create DELETE route
 []
 []

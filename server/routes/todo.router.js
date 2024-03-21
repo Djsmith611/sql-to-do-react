@@ -37,6 +37,23 @@ todoRouter.post("/", (req, res) => {
 });
 
 // PUT
+todoRouter.put("/:id", (req, res) => {
+  const taskId = req.params.id;
+  const sqlText = `
+    UPDATE tasks
+    SET complete = NOT complete, toggleText = NOT toggleText
+    WHERE id = $1;
+    `;
+  pool
+    .query(sqlText, [taskId])
+    .then((result) => {
+      res.sendStatus(200);
+    })
+    .catch((error) => {
+      console.error(`ERROR in ROUTER PUT${sqlText}:`, error);
+      res.sendStatus(500);
+    });
+});
 
 // DELETE
 
