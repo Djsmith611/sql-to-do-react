@@ -9,8 +9,13 @@ function App () {
       </header>
       <main>
         <form>
-          <input type="text" />
+          <h3>Add a task</h3>
+          <input type="text" placeholder='Task' />
         </form>
+        <h2>Tasks</h2>
+        <ul>
+
+        </ul>
       </main>
       <footer>
 

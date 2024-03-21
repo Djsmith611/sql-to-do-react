@@ -5,7 +5,7 @@
 FRONT END
 [x]  create a form
 [x]  create an input field
-[]  create a display field
+[x]  create a display field
 []  attach input field to a variable
 []  display variable in display field
 []  create GET route
