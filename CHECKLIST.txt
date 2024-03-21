@@ -10,6 +10,7 @@ FRONT END
 [x] create list variable to be displayed
 [x] source axios
 [x] create POST route
+[x] add button for submit function
 []  create GET route
 []  create DELETE route
 []  display variable in display field

@@ -19,19 +19,20 @@ function App() {
   return (
     <div className="app">
       <header>
-        <h1>TO DO APP</h1>
+        <h1>TO DO</h1>
       </header>
       <main>
-        <form>
-          <h3>Add a task</h3>
+        <form onSubmit={sendToServer} >
+          <h3>Add an item</h3>
           <input
             type="text"
             value={task}
             placeholder="Task"
             onChange={(e) => setTask(e.target.value)}
           />
+          <input type="submit" value="+" />
         </form>
-        <h2>Tasks</h2>
+        <h2>List</h2>
         <ul>
           <li>{task}</li>
         </ul>
