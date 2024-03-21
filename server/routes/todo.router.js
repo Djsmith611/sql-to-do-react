@@ -5,7 +5,8 @@ const pool = require("../modules/pool.js");
 // GET
 todoRouter.get("/", (req, res) => {
   const sqlText = `
-    SELECT * FROM tasks;
+    SELECT * FROM tasks
+    ORDER BY id;
     `;
   pool
     .query(sqlText)
