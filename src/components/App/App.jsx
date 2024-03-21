@@ -19,7 +19,7 @@ function App() {
 
   const sendToServer = (e) => {
     e.preventDefault();
-    const data = { task: task };
+    const data = { todo: task };
     axios
       .post("/api/todo", data)
       .then((response) => {
@@ -33,12 +33,24 @@ function App() {
 
   const deleteTask = (id) => {
     axios
-      .delete(`/api/todo/{id}`)
+      .delete(`/api/todo/${id}`)
       .then((response) => {
         loadTasks();
       })
       .catch((error) => {
         console.error("ERROR in DELETE", error);
+        alert("Something went wrong.");
+      });
+  };
+
+  const toggleComplete = (id) => {
+    axios
+      .put(`/api/todo/${id}`)
+      .then((response) => {
+        loadTasks();
+      })
+      .catch((error) => {
+        console.error("ERROR in PUT", error);
         alert("Something went wrong.");
       });
   };
@@ -65,7 +77,13 @@ function App() {
         </form>
         <h2>List</h2>
         <ul>
-          <li>{task}</li>
+          {taskList.map((task) => (
+            <div key={task.id}>
+              <li> {task.todo} {task.complete} </li>
+              <button onClick={() => deleteTask(task.id)}>Remove</button>
+              <button onClick={() => toggleComplete(task.id)}>{task.toggleText}</button>
+            </div>
+          ))}
         </ul>
       </main>
       <footer></footer>
