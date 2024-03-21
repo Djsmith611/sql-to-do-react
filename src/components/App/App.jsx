@@ -2,6 +2,7 @@ import { useState } from "react";
 
 function App() {
   const [task, setTask] = useState("");
+  const [taskList, setTaskList] = useState([]);
 
   return (
     <div className="app">

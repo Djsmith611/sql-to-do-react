@@ -3,10 +3,11 @@
 [x] npm run server
 [x] npm run client
 FRONT END
-[x]  create a form
-[x]  create an input field
-[x]  create a display field
-[]  attach input field to a variable
+[x] create a form
+[x] create an input field
+[x] create a display field
+[x] attach input field to a variable
+[x] create list variable to be displayed
 []  display variable in display field
 []  create GET route
 []  create POST route
