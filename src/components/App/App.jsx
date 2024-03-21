@@ -3,8 +3,16 @@ import {useState} from 'react';
 function App () {
   
   return (
-    <div>
-      <h1>TO DO APP</h1>
+    <div className='app'>
+      <header>
+        <h1>TO DO APP</h1>
+      </header>
+      <main>
+
+      </main>
+      <footer>
+
+      </footer>
     </div>
   );
 
