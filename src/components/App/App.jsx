@@ -20,7 +20,9 @@ function App() {
           />
         </form>
         <h2>Tasks</h2>
-        <ul></ul>
+        <ul>
+          <li>{task}</li>
+        </ul>
       </main>
       <footer></footer>
     </div>
