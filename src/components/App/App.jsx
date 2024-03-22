@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import './App.css';
 import Form from '../Form/Form.jsx';
+import List from '../List/List.jsx';
 
 function App() {
   const [task, setTask] = useState("");
@@ -26,6 +27,7 @@ function App() {
       .post("/api/todo", data)
       .then((response) => {
         loadTasks();
+        setTask("");
       })
       .catch((error) => {
         console.error("ERROR in POST", error);
@@ -69,19 +71,7 @@ function App() {
       <main>
         <Form sendToServer={sendToServer} task={task} setTask={setTask} />
         <h2>List</h2>
-        <ul>
-          {taskList.map((task) => (
-            <div key={task.id}>
-              <li className={task.complete.toString()}> {task.todo} </li>
-                <input 
-                type="checkbox"
-                checked={task.complete}
-                onChange={() => toggleComplete(task.id)} />
-              
-              <button onClick={() => deleteTask(task.id)}>Remove</button>
-            </div>
-          ))}
-        </ul>
+        <List taskList={taskList} toggleComplete={toggleComplete} deleteTask={deleteTask}/>
       </main>
       <footer></footer>
     </div>
