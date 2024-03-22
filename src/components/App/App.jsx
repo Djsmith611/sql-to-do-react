@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import './App.css';
+import Form from '../Form/Form.jsx';
 
 function App() {
   const [task, setTask] = useState("");
@@ -17,10 +18,10 @@ function App() {
         alert("Something went wrong.");
       });
   };
-
+  
   const sendToServer = (e) => {
     e.preventDefault();
-    const data = { todo: task, complete: false};
+    const data = { todo: task, complete: false };
     axios
       .post("/api/todo", data)
       .then((response) => {
@@ -66,21 +67,12 @@ function App() {
         <h1>TO DO</h1>
       </header>
       <main>
-        <form onSubmit={sendToServer}>
-          <h3>Add an item</h3>
-          <input
-            type="text"
-            value={task}
-            placeholder="Task"
-            onChange={(e) => setTask(e.target.value)}
-          />
-          <input type="submit" value="+" />
-        </form>
+        <Form sendToServer={sendToServer} task={task} setTask={setTask} />
         <h2>List</h2>
         <ul>
           {taskList.map((task) => (
             <div key={task.id}>
-              <li className={task.complete}> {task.todo} </li>
+              <li className={task.complete.toString()}> {task.todo} </li>
                 <input 
                 type="checkbox"
                 checked={task.complete}
