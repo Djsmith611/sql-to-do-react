@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import './App.css';
-import Form from '../Form/Form.jsx';
-import List from '../List/List.jsx';
+import "./App.css";
+import Form from "../Form/Form.jsx";
+import List from "../List/List.jsx";
 
 function App() {
   const [task, setTask] = useState("");
   const [taskList, setTaskList] = useState([]);
 
-   const loadTasks = () => {
+  const loadTasks = () => {
     axios
       .get("/api/todo")
       .then((response) => {
@@ -19,7 +19,7 @@ function App() {
         alert("Something went wrong.");
       });
   };
-  
+
   const sendToServer = (e) => {
     e.preventDefault();
     const data = { todo: task, complete: false };
@@ -71,7 +71,11 @@ function App() {
       <main>
         <Form sendToServer={sendToServer} task={task} setTask={setTask} />
         <h2>List</h2>
-        <List taskList={taskList} toggleComplete={toggleComplete} deleteTask={deleteTask}/>
+        <List
+          taskList={taskList}
+          toggleComplete={toggleComplete}
+          deleteTask={deleteTask}
+        />
       </main>
       <footer></footer>
     </div>
