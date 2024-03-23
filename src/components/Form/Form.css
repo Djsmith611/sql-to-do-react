@@ -1,5 +1,8 @@
+:root{
+    --form:rgb(144, 0, 255);
+}
 .Form{
-    background-color: rgb(88, 110, 130);
+    background-color: var(--inset);
     width: 80vw;
     margin: auto;
     margin-top: 10px;
@@ -8,25 +11,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: solid 3px black;
-    box-shadow: 5px 5px 15px blue inset;
+    border: solid 3px var(--shade);
+    box-shadow: 5px 5px 15px var(--form) inset;
 }
 .Form-head{
     margin: auto;
     margin-right: 20px;
+    color: var(--form);
 }
 .Form-input{
     margin: auto;
     margin-left: 20px;
     margin-right: 20px;
-    background-color: black;
+    background-color: var(--form);
     color: aliceblue;
     border-radius: 5px;
 }
 .Form-submit{
     margin: auto;
     margin-left: 20px;
-    background-color: black;
+    background-color: var(--form);
     color: aliceblue;
     border-radius: 10px;
 }

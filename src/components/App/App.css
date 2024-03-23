@@ -1,6 +1,7 @@
 :root {
   --app-head: rgb(0, 137, 250);
   --shade:rgba(0, 0, 0, 0);
+  --inset:#222;
 }
 
 .App {
@@ -9,7 +10,7 @@
 }
 
 .App-header {
-  background-color: #222;
+  background-color: var(--inset);
   height: 70px;
   padding: 20px;
   color: var(--app-head);
