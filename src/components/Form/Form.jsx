@@ -9,14 +9,19 @@ function Form({ sendToServer, task, setTask }) {
 
   return (
     <form onSubmit={handleSubmit} className="Form">
-      <h3>Add an item</h3>
+      <h3 className="Form-head">Add a task</h3>
       <input
+        className="Form-input"
         type="text"
         value={task}
         placeholder="Task"
         onChange={(e) => setTask(e.target.value)}
       />
-      <input type="submit" value="+" />
+      <input
+        className="Form-submit"
+        type="submit"
+        value="Add"
+        />
     </form>
   );
 }

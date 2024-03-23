@@ -66,11 +66,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>TO DO</h1>
+        <h1>TO DO LIST</h1>
       </header>
       <main>
         <Form sendToServer={sendToServer} task={task} setTask={setTask} />
-        <h2 className="App-title">List</h2>
         <List
           taskList={taskList}
           toggleComplete={toggleComplete}
