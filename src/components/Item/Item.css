@@ -3,8 +3,7 @@
   padding: 0;
   border: solid black 1px;
   display: flex;
-  align-items: center;
-  justify-content: left;
+  justify-content: space-between;
 }
 .complete {
   background-color: green;
