@@ -1,4 +1,5 @@
 import React from "react";
+import "./Form.css";
 
 function Form({ sendToServer, task, setTask }) {
   const handleSubmit = (e) => {
@@ -7,7 +8,7 @@ function Form({ sendToServer, task, setTask }) {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="Form">
       <h3>Add an item</h3>
       <input
         type="text"

@@ -1,0 +1,14 @@
+.Item{
+    margin: 0;
+    padding: 0;
+    border: solid black 1px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+.complete{
+    background-color: green;
+}
+.incomplete{
+    background-color: gray;
+}

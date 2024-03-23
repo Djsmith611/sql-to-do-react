@@ -1,0 +1,7 @@
+.List {
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+    width: 80vw;
+    border-radius: 10px;
+}

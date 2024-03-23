@@ -1,19 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./List.css";
+import Item from "../Item/Item.jsx";
 
 function List({ taskList, toggleComplete, deleteTask }) {
+  const [isEditMode, setIsEditMode] = useState(false)
+
+  const toggleEditMode = () => {
+    setIsEditMode(!isEditMode);
+  }
+
   return (
-    <ul>
+    <ul className="List">
+      <button className="List-edit" onClick={toggleEditMode}>
+        {isEditMode ? 'Cancel Edit' : 'Edit'}
+      </button>
       {taskList.map((task) => (
-        <li key={task.id} className={task.complete.toString()}>
-          <input
-            type="checkbox"
-            checked={task.complete}
-            onChange={() => toggleComplete(task.id)}
+        <div key={task.id}>
+          <Item
+            task={task}
+            toggleComplete={toggleComplete}
+            deleteTask={deleteTask}
+            isEditMode={isEditMode}
           />
-          <span> {task.todo} </span>
-          <button onClick={() => deleteTask(task.id)}>Remove</button>
-        </li>
+        </div>
       ))}
     </ul>
   );

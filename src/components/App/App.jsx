@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./App.css";
 import Form from "../Form/Form.jsx";
@@ -64,13 +64,13 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
-      <header>
+    <div className="App">
+      <header className="App-header">
         <h1>TO DO</h1>
       </header>
       <main>
         <Form sendToServer={sendToServer} task={task} setTask={setTask} />
-        <h2>List</h2>
+        <h2 className="App-title">List</h2>
         <List
           taskList={taskList}
           toggleComplete={toggleComplete}
