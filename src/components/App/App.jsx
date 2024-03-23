@@ -66,7 +66,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>TO DO LIST</h1>
+        <div className="App-logo">
+          <img className="App-logo-svg" src="/public/images/notepad.svg" width="55px"/>
+        </div>
+        <h1 className="App-title">TO DO LIST</h1>
       </header>
       <main>
         <Form sendToServer={sendToServer} task={task} setTask={setTask} />
