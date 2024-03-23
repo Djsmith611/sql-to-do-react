@@ -1,8 +1,8 @@
-.Display-input{
-    height: 25px;
-    width: 25px;
-    border: solid black;
+.Display-input {
+  height: 25px;
+  width: 25px;
+  border: solid black;
 }
-.Display-task{
-    font-size: 25px;
+.Display-task {
+  font-size: 25px;
 }

@@ -3,16 +3,16 @@ import "./List.css";
 import Item from "../Item/Item.jsx";
 
 function List({ taskList, toggleComplete, deleteTask }) {
-  const [isEditMode, setIsEditMode] = useState(false)
+  const [isEditMode, setIsEditMode] = useState(false);
 
   const toggleEditMode = () => {
     setIsEditMode(!isEditMode);
-  }
+  };
 
   return (
     <ul className="List">
       <button className="List-edit" onClick={toggleEditMode}>
-        {isEditMode ? 'Cancel Edit' : 'Edit'}
+        {isEditMode ? "Cancel Edit" : "Edit"}
       </button>
       {taskList.map((task) => (
         <div key={task.id}>

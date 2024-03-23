@@ -1,7 +1,7 @@
 import React from "react";
 import "./Display.css";
 
-function Display({task, toggleComplete}) {
+function Display({ task, toggleComplete }) {
   return (
     <div className="Display">
       <input
