@@ -8,10 +8,18 @@
 }
 .List-edit {
   background-color: var(--form);
-  color: aliceblue;
+  color: rgb(0, 0, 0);
   border-radius: 10px;
+  border: solid 1px var(--shade);
   margin: auto;
   width: 60px;
+  box-shadow: 0px 0px 15px 5px var(--form);
+  cursor:pointer;
+  transition: all 0.3s;
+}
+.List-edit:hover {
+  border: solid 2px black;
+  background-color: rgb(182, 104, 255);
 }
 .List > li:first-child  > div{
   border-top-left-radius: 10px;

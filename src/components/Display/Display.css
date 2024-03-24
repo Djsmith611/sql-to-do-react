@@ -5,6 +5,7 @@
   margin-left: 5px;
   margin-top: 7px;
   padding: 0;
+  cursor: pointer;
 }
 .Display-task {
   font-size: 25px;

@@ -5,28 +5,36 @@
     background-color: var(--inset);
     width: 80vw;
     margin: auto;
-    margin-top: 10px;
+    margin-top: 25px;
     border-radius: 10px;
     padding:5px;
     display: flex;
     justify-content: center;
     align-items: center;
     border: solid 3px var(--shade);
-    box-shadow: 5px 5px 15px var(--form) inset;
+    box-shadow: 0px 0px 15px 5px var(--form) inset;
 }
 .Form-head{
     margin: auto;
     margin-right: 20px;
-    color: var(--form);
+    color: rgb(199, 126, 255);
+    text-shadow: 0px 0px 15px var(--form);
+    cursor: default;
 }
 .Form-input{
     margin: auto;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 0;
+    margin-right: 0;
     background-color: var(--form);
     color: aliceblue;
-    border-radius: 5px;
+    border-radius: 10px;
+    border: solid 1px var(--shade);
     text-align: center;
+    box-shadow: 0px 0px 15px 5px var(--form);
+    transition: all 0.3s;
+}
+.Form-input:focus{
+    background-color: rgb(182, 104, 255);
 }
 .Form-input::placeholder{
     color: black;
@@ -34,7 +42,20 @@
 .Form-submit{
     margin: auto;
     margin-left: 20px;
+    width: 60px;
     background-color: var(--form);
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     border-radius: 10px;
+    box-shadow: 0px 0px 15px 5px var(--form);
+    border: solid 1px var(--shade);
+    transition: all 0.3s;
+    font-weight: bold;
+    cursor:pointer;
+}
+.Form-submit:hover {
+    border: solid 2px black;
+    background-color: rgb(182, 104, 255);
+}
+.Form-submit:active {
+    background-color: chartreuse;
 }
