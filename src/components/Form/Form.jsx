@@ -14,7 +14,7 @@ function Form({ sendToServer, task, setTask, toggleEditMode, isEditMode }) {
         className="Form-input"
         type="text"
         value={task}
-        placeholder="Task"
+        placeholder="Type here!"
         onChange={(e) => setTask(e.target.value)}
       />
       <input className="Form-submit" type="submit" value="Add" />

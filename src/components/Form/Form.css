@@ -26,6 +26,10 @@
     background-color: var(--form);
     color: aliceblue;
     border-radius: 5px;
+    text-align: center;
+}
+.Form-input::placeholder{
+    color: black;
 }
 .Form-submit{
     margin: auto;
