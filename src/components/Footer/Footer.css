@@ -1,0 +1,23 @@
+.Footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: var(--inset);
+    height: 70px;
+    padding: 20px;
+    color: var(--app-head);
+    width: 90%;
+    border-top-right-radius: 100px;
+    margin: auto;
+    margin-left: 0;
+    margin-bottom: 0px;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+.Footer-link{
+    text-decoration: none;
+    color: aquamarine;
+    background-color: rgb(36, 71, 102);
+    padding: 10px;
+    border-radius: 10px;
+}

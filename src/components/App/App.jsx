@@ -3,6 +3,7 @@ import axios from "axios";
 import "./App.css";
 import Form from "../Form/Form.jsx";
 import List from "../List/List.jsx";
+import Footer from "../Footer/Footer.jsx";
 
 function App() {
   const [task, setTask] = useState("");
@@ -86,7 +87,7 @@ function App() {
           isEditMode={isEditMode}
         />
       </main>
-      <footer></footer>
+      <Footer />
     </div>
   );
 }
