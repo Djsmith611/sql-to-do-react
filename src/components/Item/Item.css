@@ -10,5 +10,6 @@
   color: white;
 }
 .incomplete {
-  background-color: gray;
+  background: linear-gradient(to right, #283da7, #8800ff);
+  color: rgb(255, 255, 255);
 }
