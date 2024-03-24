@@ -13,6 +13,10 @@
     margin-bottom: 0px;
     margin-top: auto;
     flex-shrink: 0;
+    box-shadow: -5px 5px 15px var(--app-head) inset;
+    text-shadow: 5px -5px 15px var(--app-head);
+    border-top: solid var(--shade);
+    border-right: solid var(--shade);
 }
 .Footer-link{
     text-decoration: none;
