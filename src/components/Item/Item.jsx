@@ -7,12 +7,12 @@ function Item({task, toggleComplete, deleteTask, isEditMode}) {
     const itemClasses = `Item ${task.complete ? 'complete' : 'incomplete'}`
 
     return(
-        <li className={itemClasses}>
+        <div className={itemClasses}>
           <Display task={task} toggleComplete={toggleComplete} />
           {isEditMode && (
             <Delete task={task} deleteTask={deleteTask} />
           )}
-        </li>
+        </div>
     );
 }
 

@@ -14,7 +14,7 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, blue, hotpink, purple);
+  background: linear-gradient(45deg, rgb(0, 153, 255), rgb(155, 20, 88), rgb(67, 6, 67));
   background-size: 300% 300%;
   animation: gradient-shift 10s infinite alternate;
   z-index: -1;

@@ -1,7 +1,7 @@
 import React from "react";
 import "./Form.css";
 
-function Form({ sendToServer, task, setTask }) {
+function Form({ sendToServer, task, setTask, toggleEditMode, isEditMode }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     sendToServer(e);
@@ -17,11 +17,10 @@ function Form({ sendToServer, task, setTask }) {
         placeholder="Task"
         onChange={(e) => setTask(e.target.value)}
       />
-      <input
-        className="Form-submit"
-        type="submit"
-        value="Add"
-        />
+      <input className="Form-submit" type="submit" value="Add" />
+      <button className="List-edit" type="button" onClick={toggleEditMode}>
+        {isEditMode ? "Cancel" : "Edit"}
+      </button>
     </form>
   );
 }

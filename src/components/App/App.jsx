@@ -7,6 +7,7 @@ import List from "../List/List.jsx";
 function App() {
   const [task, setTask] = useState("");
   const [taskList, setTaskList] = useState([]);
+  const [isEditMode, setIsEditMode] = useState(false);
 
   const loadTasks = () => {
     axios
@@ -58,6 +59,11 @@ function App() {
         alert("Something went wrong.");
       });
   };
+  
+
+  const toggleEditMode = () => {
+    setIsEditMode(!isEditMode);
+  };
 
   useEffect(() => {
     loadTasks();
@@ -72,11 +78,12 @@ function App() {
         <h1 className="App-title">TO DO LIST</h1>
       </header>
       <main>
-        <Form sendToServer={sendToServer} task={task} setTask={setTask} />
+        <Form sendToServer={sendToServer} task={task} setTask={setTask} toggleEditMode={toggleEditMode} isEditMode={isEditMode}/>
         <List
           taskList={taskList}
           toggleComplete={toggleComplete}
           deleteTask={deleteTask}
+          isEditMode={isEditMode}
         />
       </main>
       <footer></footer>
