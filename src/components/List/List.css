@@ -17,9 +17,15 @@
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
+.List > li:first-child  > div > .Delete{
+  border-top-right-radius: 10px;
+}
 
 .List > li:last-child  > div{
   border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.List > li:last-child  > div > .Delete{
   border-bottom-right-radius: 10px;
 }
 
