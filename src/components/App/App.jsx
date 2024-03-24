@@ -4,56 +4,22 @@ import "./App.css";
 import Form from "../Form/Form.jsx";
 import List from "../List/List.jsx";
 import Footer from "../Footer/Footer.jsx";
+import LoadList from "../Requests/LoadList.jsx";
+import PostData from "../Requests/PostData.jsx";
+import DeleteTask from "../Requests/DeleteTask.jsx";
+import ToggleComplete from "../Requests/ToggleComplete.jsx";
 
 function App() {
   const [task, setTask] = useState("");
   const [taskList, setTaskList] = useState([]);
   const [isEditMode, setIsEditMode] = useState(false);
 
-  const loadTasks = () => {
-    axios
-      .get("/api/todo")
-      .then((response) => {
-        setTaskList(response.data);
-      })
-      .catch((error) => {
-        console.error("ERROR in GET", error);
-        alert("Something went wrong.");
-      });
-  };
-
-  const sendToServer = (e) => {
-    e.preventDefault();
-    const data = { todo: task, complete: false };
-    axios
-      .post("/api/todo", data)
-      .then((response) => {
-        loadTasks();
-        setTask("");
-      })
-      .catch((error) => {
-        console.error("ERROR in POST", error);
-        alert("Something went wrong.");
-      });
-  };
-
-  const deleteTask = (id) => {
-    axios
-      .delete(`/api/todo/${id}`)
-      .then((response) => {
-        loadTasks();
-      })
-      .catch((error) => {
-        console.error("ERROR in DELETE", error);
-        alert("Something went wrong.");
-      });
-  };
 
   const toggleComplete = (id) => {
     axios
       .put(`/api/todo/${id}`)
       .then((response) => {
-        loadTasks();
+        LoadList(setTaskList);
       })
       .catch((error) => {
         console.error("ERROR in PUT", error);
@@ -67,7 +33,7 @@ function App() {
   };
 
   useEffect(() => {
-    loadTasks();
+    LoadList(setTaskList);
   }, []);
 
   return (
@@ -79,12 +45,19 @@ function App() {
         <h1 className="App-title">TO DO LIST</h1>
       </header>
       <main>
-        <Form sendToServer={sendToServer} task={task} setTask={setTask} toggleEditMode={toggleEditMode} isEditMode={isEditMode}/>
+        <Form 
+          sendToServer={PostData}
+          task={task} 
+          setTask={setTask} 
+          toggleEditMode={toggleEditMode} 
+          isEditMode={isEditMode}
+          setTaskList={setTaskList}/>
         <List
           taskList={taskList}
           toggleComplete={toggleComplete}
-          deleteTask={deleteTask}
+          deleteTask={DeleteTask}
           isEditMode={isEditMode}
+          setTaskList={setTaskList}
         />
       </main>
       <Footer />

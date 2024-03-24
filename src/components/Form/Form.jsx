@@ -1,10 +1,10 @@
 import React from "react";
 import "./Form.css";
 
-function Form({ sendToServer, task, setTask, toggleEditMode, isEditMode }) {
+function Form({ sendToServer, task, setTask, toggleEditMode, isEditMode, setTaskList }) {
   const handleSubmit = (e) => {
     e.preventDefault();
-    sendToServer(e);
+    sendToServer(e, task, setTask, setTaskList);
   };
 
   return (

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./List.css";
 import Item from "../Item/Item.jsx";
 
-function List({ taskList, toggleComplete, deleteTask, isEditMode}) {
+function List({ taskList, toggleComplete, deleteTask, isEditMode, setTaskList}) {
 
   return (
     <ul className="List">
@@ -14,6 +14,7 @@ function List({ taskList, toggleComplete, deleteTask, isEditMode}) {
             toggleComplete={toggleComplete}
             deleteTask={deleteTask}
             isEditMode={isEditMode}
+            setTaskList={setTaskList}
           />
         </li>
       ))}
