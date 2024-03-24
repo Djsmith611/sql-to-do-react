@@ -6,7 +6,8 @@
   justify-content: space-between;
 }
 .complete {
-  background-color: green;
+  background: linear-gradient(to right, #28a745, #007bff);
+  color: white;
 }
 .incomplete {
   background-color: gray;
