@@ -6,10 +6,12 @@
   justify-content: space-between;
 }
 .complete {
-  background: linear-gradient(to right, #28a745, #007bff);
+  background: linear-gradient(to right, #a72833, #007bff);
   color: white;
+  text-shadow: 0 0 2px #000, 0 0 4px #000, 0 0 6px #000, 0 0 8px #8800ff;
 }
 .incomplete {
-  background: linear-gradient(to right, #283da7, #8800ff);
-  color: rgb(255, 255, 255);
+  background: linear-gradient(to right, #000000, #8800ff);
+  color: white;
+  text-shadow: 0 0 2px #000, 0 0 4px #a72833, 0 0 6px #a72833, 0 0 8px #007bff;
 }
