@@ -1,10 +1,12 @@
 import React from "react";
 import "./Form.css";
+import PostData from "../Requests/PostData.jsx";
 
-function Form({ sendToServer, task, setTask, toggleEditMode, isEditMode, setTaskList }) {
+
+function Form({ task, setTask, toggleEditMode, isEditMode, setTaskList }) {
   const handleSubmit = (e) => {
     e.preventDefault();
-    sendToServer(e, task, setTask, setTaskList);
+    PostData(e, task, setTask, setTaskList);
   };
 
   return (
