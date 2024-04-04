@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "./List.css";
+import "./ToDoList.css";
 import Item from "../Item/Item.jsx";
 
-function List({ taskList, isEditMode, setTaskList}) {
+function ToDoList({ taskList, isEditMode, setTaskList}) {
 
   return (
     <ul className="List">
@@ -20,4 +20,4 @@ function List({ taskList, isEditMode, setTaskList}) {
   );
 }
 
-export default List;
+export default ToDoList;

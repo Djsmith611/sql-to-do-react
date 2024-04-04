@@ -1,9 +1,9 @@
 import React from "react";
-import "./Delete.css";
+import "./DeleteButton.css";
 import DeleteTask from "../Requests/DeleteTask.jsx";
 
 
-function Delete({ task, setTaskList }) {
+function DeleteButton({ task, setTaskList }) {
   return (
     <button className="Delete" onClick={() => DeleteTask(task.id, setTaskList)}>
       Remove
@@ -11,4 +11,4 @@ function Delete({ task, setTaskList }) {
   );
 }
 
-export default Delete;
+export default DeleteButton;

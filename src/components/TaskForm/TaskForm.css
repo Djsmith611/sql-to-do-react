@@ -1,7 +1,7 @@
 :root{
     --form:rgb(144, 0, 255);
 }
-.Form{
+.TaskForm{
     background-color: var(--inset);
     width: 80vw;
     margin: auto;
@@ -14,14 +14,14 @@
     border: solid 3px var(--shade);
     box-shadow: 0px 0px 15px 5px var(--form) inset;
 }
-.Form-head{
+.TaskForm-head{
     margin: auto;
     margin-right: 20px;
     color: rgb(199, 126, 255);
     text-shadow: 0px 0px 15px var(--form);
     cursor: default;
 }
-.Form-input{
+.TaskForm-input{
     margin: auto;
     margin-left: 0;
     margin-right: 0;
@@ -33,13 +33,13 @@
     box-shadow: 0px 0px 15px 5px var(--form);
     transition: all 0.3s;
 }
-.Form-input:focus{
+.TaskForm-input:focus{
     background-color: rgb(182, 104, 255);
 }
-.Form-input::placeholder{
+.TaskForm-input::placeholder{
     color: black;
 }
-.Form-submit{
+.TaskForm-submit{
     margin: auto;
     margin-left: 20px;
     width: 60px;
@@ -52,10 +52,10 @@
     font-weight: bold;
     cursor:pointer;
 }
-.Form-submit:hover {
+.TaskForm-submit:hover {
     border: solid 2px black;
     background-color: rgb(182, 104, 255);
 }
-.Form-submit:active {
+.TaskForm-submit:active {
     background-color: chartreuse;
 }

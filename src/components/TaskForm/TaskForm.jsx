@@ -1,25 +1,25 @@
 import React from "react";
-import "./Form.css";
+import "./TaskForm.css";
 import PostData from "../Requests/PostData.jsx";
 
 
-function Form({ task, setTask, toggleEditMode, isEditMode, setTaskList }) {
+function TaskForm({ task, setTask, toggleEditMode, isEditMode, setTaskList }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     PostData(e, task, setTask, setTaskList);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="Form">
-      <h3 className="Form-head">Add a task</h3>
+    <form onSubmit={handleSubmit} className="TaskForm">
+      <h3 className="TaskForm-head">Add a task</h3>
       <input
-        className="Form-input"
+        className="TaskForm-input"
         type="text"
         value={task}
         placeholder="Type here!"
         onChange={(e) => setTask(e.target.value)}
       />
-      <input className="Form-submit" type="submit" value="Add" />
+      <input className="TaskForm-submit" type="submit" value="Add" />
       <button className="List-edit" type="button" onClick={toggleEditMode}>
         {isEditMode ? "Cancel" : "Edit"}
       </button>
@@ -27,4 +27,4 @@ function Form({ task, setTask, toggleEditMode, isEditMode, setTaskList }) {
   );
 }
 
-export default Form;
+export default TaskForm;

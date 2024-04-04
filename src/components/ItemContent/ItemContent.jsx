@@ -1,18 +1,18 @@
 import React from "react";
-import "./Display.css";
+import "./ItemContent.css";
 import ToggleComplete from "../Requests/ToggleComplete.jsx";
 
-function Display({ task, setTaskList}) {
+function ItemContent({ task, setTaskList}) {
   return (
-    <div className="Display">
+    <div className="ItemContent">
       <input
-        className="Display-input"
+        className="ItemContent-input"
         type="checkbox"
         checked={task.complete}
         onChange={() => ToggleComplete(task.id, setTaskList)}
       />
-      <span className="Display-task"> {task.todo} </span>
+      <span className="ItemContent-task"> {task.todo} </span>
     </div>
   );
 }
-export default Display;
+export default ItemContent;

@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
-import Form from "../Form/Form.jsx";
-import List from "../List/List.jsx";
+import TaskForm from "../TaskForm/TaskForm.jsx";
+import ToDoList from "../ToDoList/ToDoList.jsx";
 import Footer from "../Footer/Footer.jsx";
 import LoadList from "../Requests/LoadList.jsx";
+import '@fontsource/roboto/300.css';
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/500.css';
+import '@fontsource/roboto/700.css';
 
 function App() {
   const [task, setTask] = useState("");
@@ -27,13 +31,13 @@ function App() {
         <h1 className="App-title">TO DO LIST</h1>
       </header>
       <main>
-        <Form 
+        <TaskForm 
           task={task} 
           setTask={setTask} 
           toggleEditMode={toggleEditMode} 
           isEditMode={isEditMode}
           setTaskList={setTaskList}/>
-        <List
+        <ToDoList
           taskList={taskList}
           isEditMode={isEditMode}
           setTaskList={setTaskList}

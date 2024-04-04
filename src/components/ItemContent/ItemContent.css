@@ -1,4 +1,4 @@
-.Display-input {
+.ItemContent-input {
   height: 25px;
   width: 25px;
   border: solid black;
@@ -7,7 +7,7 @@
   padding: 0;
   cursor: pointer;
 }
-.Display-task {
+.ItemContent-task {
   font-size: 25px;
   margin: auto;
   margin-top: 7px;
