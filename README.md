@@ -1,4 +1,4 @@
-# Server-Side Calculator <a name="top"></a>
+# Server-Side To Do App <a name="top"></a>
 
 This project is a web-based to do list application that organizes tasks effectively. Users can easily add, edit, delete, and mark tasks as complete. The user interface is designed resembling neon lights. The tasks are organized in an easy to read list, and completed tasks are distict from incomplete ones.
 
@@ -28,6 +28,7 @@ This project is a web-based to do list application that organizes tasks effectiv
 - `React`: Jsx extension of JavaScript, component creation, useEffect, useState
 - `Express.js`: Server-side logic to store, modify, and retrieve list items
 - `Axios`: Promise-based HTTP client for making requests to the server
+- `Material UI`: React UI component library
 
 [Back to Top](#top)
 ## Getting Started
@@ -73,11 +74,10 @@ This project is a web-based to do list application that organizes tasks effectiv
 ### Usage
 
 - Use the input field marked with "Type here!" to type the task that you want to add
-- Click the `Add` button to add the task to your list.
+- Click the `+` button to add the task to your list.
 - Click the white square next to a task to mark it as complete.
-- Click the `Edit` button to reveal delete buttons.
-- Click `Remove` to remove a task, or `Cancel` to stop editing.
-- The calculation history will be displayed on the "notebook" beside the calculator.
+- Click the `The pen icon` button to reveal delete buttons.
+- Click `The trash icon` to remove a task, or `The pen icon` to stop editing.
 
 [Back to Top](#top)
 
