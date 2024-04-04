@@ -5,7 +5,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
 import Box from '@mui/material/Box';
-
+import TextField from '@mui/material/TextField';
 
 function TaskForm({ task, setTask, toggleEditMode, isEditMode, setTaskList }) {
   const handleSubmit = (e) => {
@@ -15,19 +15,39 @@ function TaskForm({ task, setTask, toggleEditMode, isEditMode, setTaskList }) {
 
   return (
     <form onSubmit={handleSubmit} className="TaskForm">
-      <h3 className="TaskForm-head">Add a task</h3>
-      <input
-        className="TaskForm-input"
-        type="text"
-        value={task}
-        placeholder="Type here!"
+      <TextField 
+        className="TaskForm-input" 
+        id="filled-basic" 
+        label="Add a Task" 
+        variant="filled" 
+        value={task} 
         onChange={(e) => setTask(e.target.value)}
-      />
-      <Box sx={{ '& > :not(style)': { m: 1 } }}>
-      <Fab className="TaskForm-submit" size="small" color="primary" aria-label="add" type="submit">
+        sx={{ 
+          my: 1, 
+          ml: 0,
+          marginRight: '10%',
+          borderRadius: '10px',
+          borderBottomLeftRadius: 0,
+          borderBottomRightRadius: 0  
+        }}
+        />
+      <Box 
+        sx={{ '& > :not(style)': { m: 1 } }}>
+      <Fab 
+        className="TaskForm-submit" 
+        size="small" 
+        color="primary" 
+        aria-label="add" 
+        type="submit"
+        >
         <AddIcon />
       </Fab>
-      <Fab className="List-edit" size="small" color="secondary" aria-label="edit" onClick={toggleEditMode}>
+      <Fab 
+        className="List-edit" 
+        size="small" 
+        color="secondary" 
+        aria-label="edit" 
+        onClick={toggleEditMode}>
         <EditIcon />
       </Fab>
       </Box>

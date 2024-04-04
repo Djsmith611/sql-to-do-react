@@ -14,23 +14,13 @@
     border: solid 3px var(--shade);
     box-shadow: 0px 0px 15px 5px var(--form) inset;
 }
-.TaskForm-head{
-    margin: auto;
-    margin-right: 20px;
-    color: rgb(199, 126, 255);
-    text-shadow: 0px 0px 15px var(--form);
-    cursor: default;
-}
 .TaskForm-input{
     margin: auto;
     margin-left: 0;
     margin-right: 0;
     background-color: var(--form);
     color: aliceblue;
-    border-radius: 10px;
-    border: solid 1px var(--shade);
     text-align: center;
-    box-shadow: 0px 0px 15px 5px var(--form);
     transition: all 0.3s;
     width: 70%;
 }
