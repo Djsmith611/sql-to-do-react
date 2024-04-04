@@ -30,12 +30,22 @@ function ItemContent({ task, setTaskList}) {
           }
         }}
       />
-      <Divider orientation="vertical" variant="middle" flexItem />
+      <Divider 
+        orientation="vertical" 
+        variant="middle" 
+        sx={{ 
+          backgroundColor: 'black'
+        }}  
+        flexItem />
       <Typography 
         variant="h5" 
         className="ItemContent-task" 
         sx={{ 
-          marginLeft: '10px'}} gutterBottom> {task.todo} </Typography>
+          marginLeft: '10px'
+        }} 
+        gutterBottom> 
+          {task.todo} 
+      </Typography>
     </Box>
   );
 }
