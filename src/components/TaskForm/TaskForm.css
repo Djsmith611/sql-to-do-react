@@ -32,6 +32,7 @@
     text-align: center;
     box-shadow: 0px 0px 15px 5px var(--form);
     transition: all 0.3s;
+    width: 70%;
 }
 .TaskForm-input:focus{
     background-color: rgb(182, 104, 255);

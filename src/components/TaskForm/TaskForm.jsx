@@ -4,6 +4,7 @@ import PostData from "../Requests/PostData.jsx";
 import EditIcon from '@mui/icons-material/Edit';
 import Fab from '@mui/material/Fab';
 import AddIcon from '@mui/icons-material/Add';
+import Box from '@mui/material/Box';
 
 
 function TaskForm({ task, setTask, toggleEditMode, isEditMode, setTaskList }) {
@@ -22,10 +23,14 @@ function TaskForm({ task, setTask, toggleEditMode, isEditMode, setTaskList }) {
         placeholder="Type here!"
         onChange={(e) => setTask(e.target.value)}
       />
-      <input className="TaskForm-submit" type="submit" value="Add" />
-      <Fab className="List-edit" color="secondary" aria-label="edit" onClick={toggleEditMode}>
+      <Box sx={{ '& > :not(style)': { m: 1 } }}>
+      <Fab className="TaskForm-submit" size="small" color="primary" aria-label="add" type="submit">
+        <AddIcon />
+      </Fab>
+      <Fab className="List-edit" size="small" color="secondary" aria-label="edit" onClick={toggleEditMode}>
         <EditIcon />
       </Fab>
+      </Box>
     </form>
   );
 }
