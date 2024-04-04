@@ -1,6 +1,9 @@
 import React from "react";
 import "./TaskForm.css";
 import PostData from "../Requests/PostData.jsx";
+import EditIcon from '@mui/icons-material/Edit';
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
 
 
 function TaskForm({ task, setTask, toggleEditMode, isEditMode, setTaskList }) {
@@ -20,9 +23,9 @@ function TaskForm({ task, setTask, toggleEditMode, isEditMode, setTaskList }) {
         onChange={(e) => setTask(e.target.value)}
       />
       <input className="TaskForm-submit" type="submit" value="Add" />
-      <button className="List-edit" type="button" onClick={toggleEditMode}>
-        {isEditMode ? "Cancel" : "Edit"}
-      </button>
+      <Fab className="List-edit" color="secondary" aria-label="edit" onClick={toggleEditMode}>
+        <EditIcon />
+      </Fab>
     </form>
   );
 }
