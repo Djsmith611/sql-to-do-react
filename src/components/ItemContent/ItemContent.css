@@ -6,11 +6,15 @@
   margin-top: 7px;
   padding: 0;
   cursor: pointer;
+  align-self: center;
 }
 .ItemContent-task {
   font-size: 25px;
   margin: auto;
+  margin-left: 50px;
   margin-top: 7px;
   padding: 0;
   height: 25px;
+  align-self: center;
+
 }
