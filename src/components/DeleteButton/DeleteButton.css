@@ -1,11 +1,1 @@
-.Delete {
-  background-color: #ff4d4d;
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  cursor: pointer;
-  transition: background-color 1s;
-}
-.Delete:hover {
-  background-color: #ff8e8e;
-}
+
