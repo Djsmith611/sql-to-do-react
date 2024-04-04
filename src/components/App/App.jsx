@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <div className="App-logo">
-          <img className="App-logo-svg" src="/public/images/notepad.svg" width="55px"/>
+          <img className="App-logo-svg" src="/images/notepad.svg" width="55px"/>
         </div>
         <h1 className="App-title">TO DO LIST</h1>
       </header>
